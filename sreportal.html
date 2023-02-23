@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRE PORTAL</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+      function goBack() {
+      
+      window.history.back()
+      
+      }
+      
+      </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+::selection{
+  color:black;
+  background: #fff;
+  
+}
+
+/* .fixed-header{
+        width: 100%;
+        position: fixed;    
+        background:rgb(10, 1, 112);    
+        padding: 10px 0;
+        color: #fff;
+        z-index: 12;
+    }
+    .fixed-header{
+        top: 0;
+    } */
+nav{
+  position: fixed;
+  background:rgb(10, 1, 112);
+  width: 100%;
+  
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu .dropdown .dropbtn{
+  display: inline-flex;
+}
+.menu .dropdown .dropbtn {
+    list-style:none;
+    margin-left: 7px;
+}
+.menu ul li{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu .dropdown.dropdown-content{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+.menu .dropdown .dropbtn:first-child{
+  margin-left: 0px;
+}
+.menu .dropdown .dropdown-content :first-child{
+  margin-left: 0px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu .dropdown .dropbtn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 4px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+/* .menu .dropdown .dropdown-content a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+} */
+.menu ul li a:hover{
+  background: #fff;
+  color: black;
+}
+.menu .dropdown .dropbtn:hover{
+  background:rgb(10, 1, 112);
+  color: black;
+}
+.menu .dropdown .dropdown-content a:hover{
+  background:black;
+  color: white;
+}
+.img{
+background:gray;
+width: 100%;
+height: 100vh;
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  
+}
+.center .btns button:first-child{
+  background: none;
+  color: white;
+}
+.btns button:first-child:hover{
+  background: white;
+  color: black;
+}
+.center .btns button:last-child{
+  background: none;
+  color: white;
+}
+.btns button:last-child:hover{
+  background: white;
+  color: black;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Poppins',sans-serif;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav a:hover, .dropdown:hover .dropbtn {
+  background-color:rgb(10, 1, 112);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0s ease;
+  
+}
+/* .nav .dropdown {
+  background-color:rgb(10, 1, 112);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  
+} */
+
+.dropdown:hover .dropdown-content a:hover {
+  /* background-color: black; */
+  background-color: rgb(10, 1, 112);
+  color: black;
+}
+.dropdown:hover  {
+  /* background-color: black; */
+  background-color:rgb(10, 1, 112);
+  color: black;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  color:white;
+  text-decoration: none;
+  background-color:rgb(10, 1, 112);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 0px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.dropdown:hover .dropb{
+    background-color:rgb(10, 1, 112);
+}
+.dropdown:hover .dropdown-content a{
+  display: block;
+  color:white;
+  text-decoration: none;
+  background-color:rgb(10, 1, 112);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+</style>
+
+   </head>
+<body>
+  
+
+  <div class="fixed-header">
+  <nav>
+    <button onclick="goBack()">	&#8592</button>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">SRE PORTAL</a>
+      </div>
+      <ul>
+        <!-- <li><a href="https://www.google.com/">Home</a></li> -->
+        <div class="dropdown">
+            <button class="dropbtn">Home
+              <i class="fa fa-caret-down"></i>
+            </button>
+            
+          </div>
+            <!-- <li><a href="https://www.google.com/">about</a></li> -->
+       <div class="dropdown">
+            <button class="dropbtn">Status
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="https://10.27.52.162:3001/status/nafsreindia">Status Page</a>
+              <a href="https://10.27.52.162:3001/dashboard">Dashboard</a>
+            </div>
+          </div> 
+        <!-- <li><a href="#">Contact</a></li> -->
+        <div class="dropdown">
+            <button class="dropbtn">Products
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="https://naf365.sharepoint.com/sites/Bankerview/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=5VqdO5&xsdata=MDV8MDF8fDE2NTY3OTk0NGJjODQ0M2Y5OWQxMDhkYWZkMjI0ZTYxfDA0OTg2ZmEyNmQyODQ2Zjc5NjZhYjFhYzMyZjc0ZmE4fDB8MHw2MzgxMDA2MjEwMTIwODExMDV8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxNVFkzTkRRMk5UTXdNREk1TXpzeE5qYzBORFkxTXpBd01qa3pPekU1T21JeFpqQTJNMlF6TFRBeE1EVXROREZtT1MwNE5UTmhMVFJtT0dOaFl6QTFZakkxWkY5a05EUTRaV1EzT0MweU1qRTFMVFEzT1RRdE9URmpPQzB3TVdJNE0yRmtOemN5WmpsQWRXNXhMbWRpYkM1emNHRmpaWE09fDkwMDM3YjhiYzVhZDRkNTMzNzgzMDhkYWZkMjI0ZTVmfGNiZWFlNDVmYjhkYjQ1MjU5MmJjNWUzMmYwYmVkM2M5&sdata=NzF1ZmFjNXVKbktJWHUyRDdXMlFyOG1mM0ROQy9HQ0VjemtEcGE3RmRjcz0%3D&ovuser=04986fa2%2D6d28%2D46f7%2D966a%2Db1ac32f74fa8%2CAbdul%2ERazak%40nafinc%2Ecom&OR=Teams%2DHL&CT=1674465551143&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMzAxMDUwNTYwMCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&cid=30be0f88%2D3f45%2D4a1e%2Db6dd%2D8c508eb21d29&RootFolder=%2Fsites%2FBankerview%2FShared%20Documents%2FSRE%2FSRE%20Docs&FolderCTID=0x0120007B0CADDA27081B43B1036A4BAD87EB0B">BankerView</a>
+              <a href="#">NAF-Connect</a>
+              <a href="">NAF-Hub  </a>
+              <a href="#">NAF-Marketing </a>
+              <a href="">NAF-LPS</a>
+            </div>
+          </div>
+        <!-- <li><a href="#">Knowledge base</a></li> -->
+        <div class="dropdown">
+            <button class="dropbtn">Knowledgebase
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Sop</a>
+              
+              <a href="https://dev.azure.com/NAF-Tech/NAF-India/_wiki/wikis/NAF-TechOps/4290/Documentations">Documentation</a>
+              
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Contact
+              <i class="fa fa-caret-down"></i>
+            </button>
+          </div> 
+      </ul>
+      
+    </div>
+    
+  </nav>
+</div>
+  <div class="img">
+  <div class="center">
+    <div class="title">Welcome to the SRE Portal !!</div>
+    <div class="sub_title">Let's Monitor!</div>
+    <div class="btns">
+      <button>Review</button>
+      <button>More</button>
+    </div>
+</div>
+  </div>
+
+
+
+</body>
+</html>
